@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy Product</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- JOSEFIN GOOGLE FONT FAMILY -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="main-box">
+            <div class="question_box">
+                <h2 class="question_box_title">Dairy Production System</h2>
+                <div class="question_box_content">
+                    <div class="question_input_box available_milk">
+                        <label for="available_milk">Available Milk</label>
+                        <div class="question_input">
+                            <input type="number" id="available_milk">
+                            <sub>lr</sub>
+                        </div>
+                    </div>
+                    <div class="question_input_box">
+                        <label for="butter_milk">Butter Milk</label>
+                        <div class="question_input">
+                            <input type="number" id="butter_milk">
+                            <sub>1kg/2lr</sub>
+                        </div>
+                    </div>
+                    <div class="question_input_box">
+                        <label for="curd">Curd</label>
+                        <div class="question_input">
+                            <input type="number" id="curd">
+                            <sub>1kg/3lr</sub>
+                        </div>
+                    </div>
+                    <div class="question_input_box">
+                        <label for="paneer">Paneer</label>
+                        <div class="question_input">
+                            <input type="number" id="paneer">
+                            <sub>1kg/6lr</sub>
+                        </div>
+                    </div>
+                    <div class="question_input_box">
+                        <label for="cheese">Cheese</label>
+                        <div class="question_input">
+                            <input type="number" id="cheese">
+                            <sub>1kg/10lr</sub>
+                        </div>
+                    </div>
+                </div>
+                <div class="question_box_btn">
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+            <div class="answer_box">
+                <table class="table table-responsive">
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Lr</th>
+                        <th scope="col">Ready / Not Ready</th>
+                    </tr>
+                    <tr>
+                        <td>Butter Milk</td>
+                        <td class="butter_milk_lr"></td>
+                        <td class="ans1"></td>
+                    </tr>
+                    <tr>
+                        <td>Curd</td>
+                        <td class="curd_lr"></td>
+                        <td class="ans2"></td>
+                    </tr>
+                    <tr>
+                        <td>Paneer</td>
+                        <td class="paneer_lr"></td>
+                        <td class="ans3"></td>
+                    </tr>
+                    <tr>
+                        <td>Cheese</td>
+                        <td class="cheese_lr"></td>
+                        <td class="ans4"></td>
+                    </tr>
+                </table>
+                <div class="total_available_milk"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

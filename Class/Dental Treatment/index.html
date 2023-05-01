@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        select,
+        #displayTable input,
+        #displayTable button{
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        #displayTable, #tre-plan-table{
+            margin-top: 15px;
+            display: none;
+        }
+        #displayTable table tr th,
+        #displayTable table tr td {
+            padding: 5px 10px;
+        }
+        #displayTable input{
+            margin: 15px auto;
+        }
+        #displayTable #errorMsg{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <!-- SELECT -->
+        Select a Treatment
+        <select name="treatment" id="treatment" onchange="handleTreatment()">
+            <option value="0">--Select--</option>
+            <option value="tc">Teeth Cleaning</option>
+            <option value="fl">Filling</option>
+            <option value="rct">Root canal Treatment</option>
+            <option value="rct_c">RCT + Cover</option>
+            <option value="bi">Braces / Invisalign</option>
+        </select>
+
+        <div id="displayTable">
+            <!-- TABLE -->
+            <table border="1">
+                <tr>
+                    <th>Treatment</th>
+                    <th>Seating</th>
+                    <th>Costing</th>
+                </tr>
+                <tr>
+                    <td id="tre"></td>
+                    <td id="seating"></td>
+                    <td id="costing"></td>
+                </tr>
+            </table>
+            <!-- INPUT TYPE DATE -->
+            Select a Appointment Date
+            <input type="date" name="date" id="date">
+            <button onclick="appointment()" id="btn">Submit</button>
+            <div id="errorMsg"></div>
+            <div id="tre-plan-table"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

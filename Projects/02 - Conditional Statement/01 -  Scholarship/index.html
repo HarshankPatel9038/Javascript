@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship</title>
+
+    <!-- MONTSERRAT GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <div>
+        <div class="box">
+            <input type="number" placeholder="Enter Your CGPA" id="cgpa">
+            <input type="number" placeholder="Enter Your Fees" id="fees">
+            <select name="cast" id="cast">
+                <option value="0">--Select--</option>
+                <option value="Open">Open</option>
+                <option value="OBC">OBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+            </select>
+            <button id="submit">Submit</button>
+        </div>
+        <ul class="ans">
+            <li id="gradeMsg"></li>
+            <li id="castMsg"></li>
+            <li id="feesMsg"></li>
+            <li id="finalMsg"></li>
+            <li id="scholarshipMsg"></li>
+            <li id="totalAmountMsg"></li>
+        </ul>
+    </div>
+
+
+
+    <!-- CUSTOM JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

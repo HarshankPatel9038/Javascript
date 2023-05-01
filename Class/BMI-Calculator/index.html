@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- MONTSERRAT GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="bmi-calculator">
+    <h1 class="title">BMI Calculator</h1>
+    <form id="form">
+      <label for="Height">Enter Your Height In Centimeter</label>
+      <input type="number" placeholder="Enter Your Height" id="height">
+      <label for="weight">Enter Your Weight In Kg</label>
+      <input type="number" placeholder="Enter Your Weight" id="weight">
+      <button type="submit" id="submit" onclick="calculateBMI()">Submit</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+
+
+  <!-- BOOTSTRAP JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- CUSTOM JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

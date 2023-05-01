@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #111111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #232332;
+    color: #ffffff;
+}
+
+.tip-calculator {
+    width: 500px;
+    padding: 30px;
+    margin: auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+.tip-calculator title,
+.tip-calculator label {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.tip-calculator .title {
+    text-align: center;
+    margin: 10px auto 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tip-calculator label {
+    width: 80%;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.tip-calculator input {
+    padding: 15px;
+    outline: none;
+    border: none;
+    width: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #111111;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.tip-calculator input:read-only {
+    background: rgb(217, 217, 217);
+}
+
+.tip-calculator input::-webkit-inner-spin-button,
+.tip-calculator input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.tip-calculator #submit {
+    background: #111111;
+    color: #ffffff;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.tip-calculator #submit:hover {
+    background: #ababab;
+    color: #111111;
+}

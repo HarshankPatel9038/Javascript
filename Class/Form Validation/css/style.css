@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #111111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #4776E6, #8E54E9);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background: #FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+form input{
+    outline: none;
+    border: 2px solid #111111;
+    color: #111111;
+    width: 300px;
+    display: block;
+    margin: 0 0 25px 0;
+    padding: 14px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+}
+
+form #emailError,
+form #passwordError{
+    font-size: 12px;
+    font-weight: 600;
+    color: #F45050;
+}
+
+form input:focus{
+    border: 2px solid #B2A4FF;
+    background: #B2A4FF20;
+}
+
+form #password{
+    position: relative;
+}
+
+form #password::before{
+    content: "\f06e";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-weight: 900;
+    top: 0;
+    left: auto;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background: #111111;
+}
+
+form #btn{
+    outline: none;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: #111111;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 400ms ease-in-out 0s;
+    -webkit-transition: all 400ms ease-in-out 0s;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -ms-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+}
+
+form #btn:hover,
+form #btn:focus,
+form #btn:active{
+    background: #B2A4FF;
+}
+
+form #passwordBox{
+    position: relative;
+}
+
+form #passwordBox #passwordToggle{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 15px;
+    left: auto;
+    font-size: 20px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+#hide{
+    display: none;
+}

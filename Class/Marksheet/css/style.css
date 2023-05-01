@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #111111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+table{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+table th{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+table td{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+table .name{
+    text-transform: capitalize;
+}
