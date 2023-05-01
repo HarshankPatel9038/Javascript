@@ -85,72 +85,153 @@ console.log(ary10_3);
 
 console.log("--------------------------------------------------------");
 
-// =============== 13 - Rotating an array by a given number of positions. ===============
-function ary13ans(ary13, num) {
-  for (var i = 0; i < num; i++) {
-    ary13.unshift(ary13.pop());
+// 11 - Splitting an array into two arrays based on a condition.
+let Splitting = (ary) => {
+
+  let ary1 = [], ary2 = [];
+
+  ary.map((value) => {
+    if (value > 50) {
+      ary1.push(value);
+    } else {
+      ary2.push(value);
+    }
+  })
+
+  console.log("11 - Splitting an array into two arrays based on a condition.");
+  console.log(ary1);
+  console.log(ary2);
+
+}
+Splitting(ary1);
+
+
+
+// 11_02 - Splitting an array into number and string arrays based on a condition.
+let Splitting2 = (ary) => {
+
+  let ary1 = [], ary2 = [];
+
+  ary.map((value) => {
+    if (typeof value === "number") {
+      ary1.push(value);
+    } else if (typeof value === "string") {
+      ary2.push(value);
+    }
+  })
+
+  console.log("11_02 - Splitting an array into number and string arrays based on a condition.");
+  console.log(ary1);
+  console.log(ary2);
+
+}
+let arr = [1, 82, 77, 'Hello', 49, 'world', '!'];
+Splitting2(arr);
+
+
+
+// 13 -  Rotating an array by a given number of positions.
+let Rotating = (ary, ind) => {
+
+  let a = ary.slice(0, ind);
+  let b = ary.slice(ind);
+  let ans = b.concat(a);
+  console.log("13 -  Rotating an array by a given number of positions.");
+  console.log(ans);
+
+}
+let ary13 = [1, 82, 77, 49, 43];
+Rotating(ary13, 3);
+
+
+
+// 14 - Finding the second largest element in an array.
+let secondLargest = (ary, ind) => {
+
+  let newAry = [];
+
+  ary.map((value) => {
+    if (!newAry.includes(value)) {
+      newAry.push(value);
+    }
+  });
+
+  newAry.sort((a, b) => b - a);
+  let ans = newAry[ind - 1];
+  console.log("14 - Finding the second largest element in an array.");
+  console.log(ans);
+
+}
+secondLargest(ary1, 2);
+
+
+
+// 15 - Finding the k-th smallest element in an array.
+let smallest = (ary, ind) => {
+
+  let newAry = [];
+
+  ary.map((value) => {
+    if (!newAry.includes(value)) {
+      newAry.push(value);
+    }
+  });
+
+  newAry.sort((a, b) => a - b);
+  let ans = newAry[ind - 1];
+  console.log("15 - Finding the k-th smallest element in an array.");
+  console.log(ans);
+
+}
+smallest(ary1, 3);
+
+
+
+// 17 - Finding the median of an array.
+let median = (ary) => {
+
+  ary.sort((a, b) => a - b);
+
+  let ans;
+  console.log("17 - Finding the median of an array.")
+  if (ary.length % 2 === 0) {
+    ans = (ary[ary.length / 2 - 1] + ary[ary.length / 2]) / 2;
+  } else {
+    ans = ary[Math.floor(ary.length / 2)];
   }
-  console.log("13 - Rotating an array by a given number of positions.");
-  console.log(ary13);
+
+  console.log(ans);
+
 }
-var ary13 = [1, 2, 3, 4, 5];
-ary13ans(ary13, 2);
+let ary17 = [25, 78, 65, 73, 15, 40, 75];
+median(ary17);
 
-console.log("--------------------------------------------------------");
 
-// =============== 14 -  Finding the second largest element in an array. ===============
-let ary14 = [15, 88, 26, 47, 93];
-ary14.sort((a,b) => a - b);
-let ary14ans = ary14.length - 2;
-// let largest14 = [];
-// let secondLargest14 = [];
-// for (let i = 1; i < ary14.length; i++) {
-//   if (ary14[i] > largest14) {
-//     secondLargest14 = largest14;
-//     largest14 = ary14[i];
-//   } else if (ary14[i] > secondLargest14 && ary14[i] < largest14) {
-//     secondLargest14 = ary14[i];
-//   }
-// }
-console.log("14 -  Finding the second largest element in an array.");
-// console.log(secondLargest14);
-console.log(ary14[ary14ans]);
 
-console.log("--------------------------------------------------------");
+// 19 - Checking if two arrays are equal or not.
+let equal = (ary1, ary2) => {
 
-// =============== 15 - Finding the k-th smallest element in an array. ===============
-let ary15 = [15, 88, 26, 47, 93];
-ary15.sort((a,b) => a - b);
-let ary15ans = ary15.length - 3;
-console.log("15 - Finding the k-th smallest element in an array.");
-console.log(ary15[ary15ans]);
+  let ans;
 
-console.log("--------------------------------------------------------");
-
-// =============== 19 - Checking if two arrays are equal or not. ===============
-let ary19_1 = [15, 88, 26, 47, 93];
-let ary19_2 = [15, 88, 26, 25, 93];
-let ary19ans;
-if (ary19_1.length !== ary19_2.length) {
-  ary19ans = 1;
-}
-for (let i = 0; i < ary19_1.length; i++) {
-  if (ary19_1[i] !== ary19_2[i]) {
-    ary19ans = 1;
+  if (ary1.length !== ary2.length) {
+    ans = 1;
+  } else {
+    for (let i = 0; i < ary1.length; i++) {
+      if (ary1[i] !== ary2[i]) {
+        ans = 1;
+      } else {
+        ans = 0;
+      }
+    }
   }
-}
-console.log("19 - Checking if two arrays are equal or not.");
-if (ary19ans === 1) {
-  console.log("two arrays are not equal");
-} else {
-  console.log("two arrays are equal");
-}
+  console.log("19 - Checking if two arrays are equal or not.");
+  if (ans === 1) {
+    console.log("two arrays are not equal");
+  } else {
+    console.log("two arrays are equal");
+  }
 
-console.log("--------------------------------------------------------");
-
-// =============== 20 - Finding the union of two arrays. ===============
-const ary20_1 = [1, 2, 3, 4];
-const ary20_2 = [3, 4, 5, 6];
-const ary20ans = [...new Set([...ary20_1, ...ary20_2])];
-console.log("20 - Finding the union of two arrays.");
-console.log(ary20ans);
+}
+let ary19_01 = [1, 8, 3, 7, 9];
+let ary19_02 = [1, 8, 3, 70, 9];
+equal(ary19_01, ary19_02);
