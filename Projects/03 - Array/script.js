@@ -105,7 +105,7 @@ let Splitting = (ary) => {
 }
 Splitting(ary1);
 
-
+console.log("--------------------------------------------------------");
 
 // 11_02 - Splitting an array into number and string arrays based on a condition.
 let Splitting2 = (ary) => {
@@ -128,7 +128,7 @@ let Splitting2 = (ary) => {
 let arr = [1, 82, 77, 'Hello', 49, 'world', '!'];
 Splitting2(arr);
 
-
+console.log("--------------------------------------------------------");
 
 // 13 -  Rotating an array by a given number of positions.
 let Rotating = (ary, ind) => {
@@ -143,7 +143,7 @@ let Rotating = (ary, ind) => {
 let ary13 = [1, 82, 77, 49, 43];
 Rotating(ary13, 3);
 
-
+console.log("--------------------------------------------------------");
 
 // 14 - Finding the second largest element in an array.
 let secondLargest = (ary, ind) => {
@@ -164,7 +164,7 @@ let secondLargest = (ary, ind) => {
 }
 secondLargest(ary1, 2);
 
-
+console.log("--------------------------------------------------------");
 
 // 15 - Finding the k-th smallest element in an array.
 let smallest = (ary, ind) => {
@@ -185,7 +185,7 @@ let smallest = (ary, ind) => {
 }
 smallest(ary1, 3);
 
-
+console.log("--------------------------------------------------------");
 
 // 17 - Finding the median of an array.
 let median = (ary) => {
@@ -193,25 +193,29 @@ let median = (ary) => {
   ary.sort((a, b) => a - b);
 
   let ans;
-  console.log("17 - Finding the median of an array.")
+  let ind = Math.floor(ary.length / 2);
+
+  console.log("17 - Finding the median of an array.");
   if (ary.length % 2 === 0) {
-    ans = (ary[ary.length / 2 - 1] + ary[ary.length / 2]) / 2;
+    ans = (ary[ind - 1] + ary[ind]) / 2;
   } else {
-    ans = ary[Math.floor(ary.length / 2)];
+    ans = ary[ind];
   }
 
   console.log(ans);
 
 }
-let ary17 = [25, 78, 65, 73, 15, 40, 75];
+let ary17 = [25, 78, 65, 73, 15, 40, 75, 91];
 median(ary17);
 
-
+console.log("--------------------------------------------------------");
 
 // 19 - Checking if two arrays are equal or not.
+let ary19_01 = [1, 8, 3, 7, 9];
+let ary19_02 = [1, 8, 3, 7, 9];
 let equal = (ary1, ary2) => {
 
-  let ans;
+  let ans = 0;
 
   if (ary1.length !== ary2.length) {
     ans = 1;
@@ -219,8 +223,6 @@ let equal = (ary1, ary2) => {
     for (let i = 0; i < ary1.length; i++) {
       if (ary1[i] !== ary2[i]) {
         ans = 1;
-      } else {
-        ans = 0;
       }
     }
   }
@@ -232,6 +234,4 @@ let equal = (ary1, ary2) => {
   }
 
 }
-let ary19_01 = [1, 8, 3, 7, 9];
-let ary19_02 = [1, 8, 3, 70, 9];
 equal(ary19_01, ary19_02);
