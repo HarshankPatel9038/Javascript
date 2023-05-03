@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+
+    <div class="todo_box">
+        <form class="todo_input_box" id="todoForm">
+            <input type="text" placeholder="Enter a text" id="todoInput">
+            <button id="submit">Submit</button>
+        </form>
+        <div id="todo_items"></div>
+    </div>
+
+
+    <script>
+
+        let todoForm = document.querySelector("#todoForm");
+        let todoInput = document.querySelector("#todoInput");
+        let other = false;
+        let id = null;
+        let ary = [];
+
+        todoForm.addEventListener("submit", () => {
+            if (other) {
+                update();
+            } else {
+                addData();
+            }
+            event.preventDefault();
+        });
+
+        let display = () => {
+            let text = '<ol>';
+            ary.map((v, i) => text += '<li>'  + v + '<button onclick="edit('+ i + ')">edit</button><button onclick="remove('+ i + ')">X</button></li>');
+            text += '</ol>';
+            document.querySelector("#todo_items").innerHTML = text;
+            todoInput.value = '';
+        }
+
+        let addData = () => {
+            let value = todoInput.value
+            ary.push(value);
+            console.log(ary);
+            display();
+        }
+
+        let edit = (i) => {
+            other = true;
+            id = i;
+            todoInput.value = ary[i];
+        }
+
+        let update = () => {
+            ary[id] = todoInput.value;
+            display();
+            other = false;
+            id = null;
+            todoInput.value = '';
+        }
+
+        let remove = (i) => {
+            ary.splice(i, 1);
+            display();
+        }
+
+    </script>
+
+</body>
+</html>
